@@ -32,8 +32,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec terminal
-bindsym $mod+Return exec terminator
-#bindsym $mod+Return exec cool-retro-term
+#bindsym $mod+Return exec terminator
+bindsym $mod+Return exec cool-retro-term
 
 # kill focused window
 bindsym $mod+Shift+q kill
