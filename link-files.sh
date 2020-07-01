@@ -5,7 +5,5 @@ ln -f ~/.vimrc $(dirname $0)/.vimrc
 ln -f ~/.ssh/config $(dirname ${0})/ssh/config
 ln -f ~/.i3/config $(dirname ${0})/i3/config
 ln -f ~/.config/i3status/config $(dirname ${0})/i3status/config
-for file in "~/Documentos/Cool Retro Term/"*
-do
-  ln -f "${file}" $(dirname ${0})/"${file}"
-done
+
+find ~/Documentos/Cool\ Retro\ Term -type f -iname '*.json' -exec ln -f {} "$(dirname ${0})"/"$(basename {})" \;
