@@ -8,5 +8,5 @@ ln -f ~/.config/i3status/config $(dirname ${0})/i3status/config
 
 for file in ~/Documentos/Cool\ Retro\ Term/*
 do
-  ln -f "${file}" "$(dirname ${0})"/"$(basename ${file})"
+  cp -uva "${file}" "$(dirname ${0})"
 done
