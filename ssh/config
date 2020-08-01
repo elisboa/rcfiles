@@ -1,0 +1,18 @@
+Host *
+	ForwardAgent yes
+	#ForwardX11 yes
+	StrictHostKeyChecking no
+ 
+Host github.com
+	Hostname ssh.github.com
+	Port 443
+	IdentityFile /home/elisboa/.ssh/eduardo.lisboa__gmail.com_rsa.pem
+ 
+Host gitlab.com
+	Hostname altssh.gitlab.com
+	User git
+	Port 443
+	#IdentityFile /home/elisboa/.ssh/eduardo.lisboa__gmail.com_rsa.pem
+	#IdentityFile /home/elisboa/.ssh/eduardo.lisboa_rsa.pem
+	IdentityFile /home/elisboa/.ssh/rsa_eduardolisboa-team42_us-east-2.pem
+
