@@ -4,7 +4,7 @@ if git pull
 then
         echo "Pull complete"
 else
-        GIT_MSG="Starting new branch $(git rev-parse --abbrev-ref HEAD)"
+        GIT_MSG=":rocket: Starting new branch $(git rev-parse --abbrev-ref HEAD)"
         echo $GIT_MSG
         git commit --allow-empty -m "$GIT_MSG"
 fi
