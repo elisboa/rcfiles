@@ -1,3 +1,6 @@
 #!/bin/bash -x
 
-git push --follow-tags -u origin HEAD
+if [ "$DONT_PUSH" == "false" ]
+then
+    git push --follow-tags -u origin HEAD
+fi

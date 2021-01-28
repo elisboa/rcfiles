@@ -2,9 +2,23 @@
 
 if git pull
 then
-        echo "Pull complete"
+    echo "Pull complete"
 else
-        GIT_MSG=":rocket: Starting new branch $(git rev-parse --abbrev-ref HEAD)"
-        echo $GIT_MSG
-        git commit --allow-empty -m "$GIT_MSG"
+	if [ "$DONT_PUSH" == "false" ]
+	then
+		GIT_MSG=":tada: Starting new branch $(git rev-parse --abbrev-ref HEAD)"
+    	echo $GIT_MSG
+    	if git commit -S --allow-empty -m "$GIT_MSG"
+		then 
+			echo "Digitally signed commit complete"
+		else
+			if git commit --allow-empty -m "$GIT_MSG"
+			then
+				echo "Commit complete"
+			else
+				echo "Fail to commit"
+				exit 1
+			fi
+		fi
+	fi
 fi
