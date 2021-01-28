@@ -1,0 +1,1 @@
+Put all files on `.git/hooks` subfolder of each project you want to use them
