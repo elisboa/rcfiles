@@ -2,6 +2,7 @@ Host *
 	ForwardAgent yes
 	#ForwardX11 yes
 	StrictHostKeyChecking no
+	ServerAliveInternal 20
  
 Host github.com
 	Hostname ssh.github.com
